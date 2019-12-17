@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>
+</head>
+
+<body onload="javascript:getLocation();">
+    
+    <div class="app">
+     <img src="img/travel p.png">
+    <div > <h1><b>Wellcome to Travel Pal App<b></h1> </div>
+    
+    
+    <!-- Location -->
+    <button type="button" class="collapsible">Location</button>
+    <div class="location">
+        
+        <h2>Your Current location is </h2>
+        <h2 class="left" >City: <a class="a" id="city"> </a></h2> <br>
+        <h2 class="left">Country: <a class="a" id="country"> </a></h2>
+        
+    </div>
+        
+        <!--  Weather  -->
+        <button type="button" class="collapsible1">WEATHER</button>
+        <div class="weather">
+        <h2>Weather </h2>
+         
+        
+        <h2>Weather type:</h2>
+        
+        <p class="a" id="weather"></p>
+
+        <h2>temperature:</h2>
+        
+        <p class="a" id="temp"></p>
+        
+        <h2>Detail Info:</h2>
+        
+        <p class="a" id="d_desc"></p>
+        <button onclick="javascript:getWeather();" >Check Weather </button>	
+    </div>
+    
+    
+    <!-- Currency -->
+    <button type="button" class="collapsible2">Converter</button>
+    <div class="currency">
+    <h2>Local Currency Converter</h2>
+        
+        <h2 class="left">USD: <a class="a" id="usad"> </a></h2>
+        
+        <p ></p>
+        
+        <h2 class="left">Euro: <a class="a" id="euro"> </a></h2>
+        
+        <p ></p>
+        
+        	<label for="USD"> USD </label>
+          <input type="number" id="usd" size="10" value="0"  /> 
+    
+	</br>
+    </br>
+	<label  id="local">  </label>
+    <input type="number" id="localcur" size="10" value="0"  />
+    
+
+    </br>
+    </br>  
+        <button onclick="javascript:currencyconverter();" >Currency </button>	
+        <p id="weather"></p>
+
+    </div>
+    
+    
+    <!--  Takeing Picture  -->
+    <div>
+    	        
+        <button id="buttonPic" onClick="pics()" class="collapsible1"> Take Picture </button>
+       <div class="weather"> <img id="myImage" height="50%" width="50%"> </img> </div>
+    </div>
+    
+    <!--  Save & Open File  -->
+    <div> 
+    	<button id="buttonPic" onclick="savefile()" class="collapsible3"> Save </button>
+        <button id="buttonPic" onClick="" class="collapsible3"> Read </button>
+        
+    </div>
+    
+    
+    </div>
+    
+    <!--  script  -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    
+</body>
+
+</html>
